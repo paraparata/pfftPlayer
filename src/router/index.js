@@ -11,6 +11,11 @@ Vue.use(VueRouter)
     component: Home
   },
   {
+    path: '/sandbox',
+    name: 'Sandbox',
+    component: () => import('../views/Sandbox.vue')
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting

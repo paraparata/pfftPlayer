@@ -1,32 +1,51 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <Titlebar />
+    <router-view />
+    <Bottombar />
   </div>
 </template>
-
+<script>
+import Titlebar from '@/components/Titlebar.vue'
+import Bottombar from '@/components/Bottombar.vue'
+export default {
+  components: { Titlebar, Bottombar }
+}
+</script>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Press Start 2P', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
 }
-
-#nav {
-  padding: 30px;
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+.col {
+  flex: 1;
+  margin: 20px;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+@media (max-width: 600px) {
+  .container {
+    display: block;
+  }
 }
 </style>
