@@ -49,10 +49,6 @@ export default {
       color: '',
       width: 200,
       height: 200,
-      reward: {
-        trophy: '',
-        capt: ''
-      },
       points: [
         {
           rule: '0',

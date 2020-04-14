@@ -6,7 +6,9 @@
     <p>
       dude, never been so bored like this. just press the start button already.
     </p>
-    <button type="button" class="nes-btn is-success">Mulai</button>
+    <router-link to="/mulai">
+      <button type="button" class="nes-btn is-success">Mulai</button>
+    </router-link>
     <!-- </div> -->
   </div>
 </template>
