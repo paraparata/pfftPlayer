@@ -36,6 +36,7 @@ body {
 }
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 .col {

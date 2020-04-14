@@ -1,7 +1,7 @@
 <template>
   <div id="nav">
     <div id="navbar" class="nes-container is-rounded">
-      <code class="pfft">pfft</code>Player
+      <code class="pfft">pfft</code>10
     </div>
   </div>
 </template>

@@ -95,9 +95,18 @@ export default {
 
   computed: {
     result: function() {
-      return this.points.filter(item => {
-        return item.rule < this.numClicks
-      })
+      const filt = [
+        this.points
+          .filter(item => {
+            return item.rule < this.numClicks
+          })
+          .reduce((a, b) => {
+            return b.rule > a.rule ? b : a
+          })
+      ]
+      console.log(filt)
+
+      return filt
     }
   },
 
